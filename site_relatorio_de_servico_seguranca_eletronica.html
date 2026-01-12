@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório de Serviço - Segurança Eletrônica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #0a7cff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #055fcc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Relatório de Serviço</h1>
+
+    <!-- FORMULÁRIO -->
+    <!-- Usa FormSubmit para enviar direto ao e-mail -->
+    <form action="https://formsubmit.co/EMAIL_DO_SEU_PAI_AQUI" method="POST">
+
+      <!-- Evita spam -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <label>Nome do Cliente</label>
+      <input type="text" name="Cliente" required>
+
+      <label>Telefone</label>
+      <input type="text" name="Telefone">
+
+      <label>Endereço</label>
+      <input type="text" name="Endereço" required>
+
+      <label>Tipo de Serviço</label>
+      <select name="Serviço" required>
+        <option value="">Selecione</option>
+        <option>Instalação de Câmeras</option>
+        <option>Manutenção de Câmeras</option>
+        <option>Cerca Elétrica</option>
+        <option>Interfone</option>
+        <option>Outros</option>
+      </select>
+
+      <label>Descrição do Serviço</label>
+      <textarea name="Descrição" rows="4"></textarea>
+
+      <label>Materiais Utilizados</label>
+      <textarea name="Materiais" rows="3"></textarea>
+
+      <label>Data do Serviço</label>
+      <input type="date" name="Data" required>
+
+      <label>Técnico Responsável</label>
+      <input type="text" name="Técnico" required>
+
+      <button type="submit">Enviar Relatório</button>
+    </form>
+  </div>
+
+</body>
+</html>
